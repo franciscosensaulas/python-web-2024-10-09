@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Lista de Categorias</h1>
+      <a href="/steamfake/categoria/cadastro" class="button is-warning mb-2 is-pulled-right">
+        <span class="icon is-small">
+          <i class="fas fa-plus"></i>
+        </span>
+        <span>Nova Categoria</span>
+      </a>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+        <thead>
+          <tr class="is-warning">
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for categoria in categorias %}
+          <tr>
+            <td>{{ categoria.pk }}</td>
+            <td>{{ categoria.nome }}</td>
+            <td>
+              <a href="/steamfake/categoria/apagar/{{categoria.pk}}">Apagar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <script src="https://kit.fontawesome.com/96a844a27d.js" crossorigin="anonymous"></script>
+  </body>
+</html>
