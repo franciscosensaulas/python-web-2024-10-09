@@ -6,6 +6,19 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nome
+    
+    # Tag
+    # id, nome, descricao (textarea)
+    # 
+    # Ordem:
+    # models.py
+    # gerar migração
+    # aplicar migração
+    # ursl.py para index da tag
+    # views.py para index da tag
+    # criar o arquivo templates/tags/index.html
+    # Cadastrar, apagar, editar
+
 
 # DROP DATABASE IF EXISTS steam_fake_db
 # CREATE DATABASE steam_fake_db CHARACTER SET UTF8MB4;
